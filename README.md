@@ -25,7 +25,8 @@ You can run the supporting material in two easy steps:
 # Create servers
 # Check the region in the update.sh file
 ./update.sh mySecStack servers.yml server-parameters.json
-# Delete stack after
+# Delete stack after one after the other. Make sure you delete second stack before the first stack. 
+#The second stack has dependencies on the first stack therefore the first cannot be deleted.
 ./delete.sh mySecStack
 ./delete.sh myFirstStack
 ```
