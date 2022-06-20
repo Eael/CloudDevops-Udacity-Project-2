@@ -1,6 +1,6 @@
 # CloudDevops-Udacity-Project-2
 Using Infrastructure as code to launch a web app 
-## ND9991 - C2- Infrastructure as Code - Supporting Material and Starter Code
+## ND9991 - C2- Infrastructure as Code -
 This folder provides the code for launching a web app using AWS CloudFormation. This was done to meet the requirements of my course work with Udacity.
 
 
@@ -23,7 +23,9 @@ You can run the supporting material in two easy steps:
 # Check the region in the create.sh file
 ./create.sh myFirstStack network.yml network-parameters.json
 # Create servers
-# Change the AMI ID and key-pair name in the servers.yml
 # Check the region in the update.sh file
 ./update.sh mySecStack servers.yml server-parameters.json
+# Delete stack after
+./delete.sh myFirstStack
+./delete.sh mySecStack
 ```
