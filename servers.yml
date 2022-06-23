@@ -167,6 +167,6 @@ Resources:
 Outputs:
    WebAppLB:
     Description: DNS of the LoadBalancer
-    Value: !GetAtt WebAppLB.DNSName 
+    Value: Fn::Join: ["", ["http://", !GetAtt WebAppLB.DNSName]]
        
 
