@@ -30,3 +30,5 @@ You can run the supporting material in two easy steps:
 ./delete.sh mySecStack
 ./delete.sh myFirstStack
 ```
+
+For my work see http://secon-webap-1c7qkqov70d0r-1115334366.us-east-1.elb.amazonaws.com/
