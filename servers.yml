@@ -59,9 +59,11 @@ Resources:
           #!/bin/bash
           sudo apt-get update -y
           sudo apt-get install apache2 -y
-          sudo systemctl start apache2.service          
+          sudo systemctl start apache2.service
+          cd /var/www/html 
+          echo "It works! Udagram, Udacity" > index.html
       # ToDo: AMI ID of Ubuntu Linux machine. Too get one, try creating a VM from the web console. 
-      ImageId: ami-0cff7528ff583bf9a
+      ImageId: ami-0747bdcabd34c712a
       # ToDo: Change the key-pair name, as applicable to you. 
       #KeyName: Udacitylab
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
@@ -167,6 +169,7 @@ Resources:
 Outputs:
    WebAppLB:
     Description: DNS of the LoadBalancer
-    Value: Fn::Join: ["", ["http://", !GetAtt WebAppLB.DNSName]]
+    Value: !Join ["", [ "http://", !GetAtt WebAppLB.DNSName ] ]
+
        
 
