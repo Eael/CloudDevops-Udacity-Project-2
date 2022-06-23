@@ -164,7 +164,7 @@ Resources:
         Fn::ImportValue:
           Fn::Sub: "${EnvironmentName}-VPCID"
 
-Output:
+Outputs:
    WebAppLB:
     Description: DNS of the LoadBalancer
     Value: !GetAtt WebAppLB.DNSName 
